@@ -4,9 +4,12 @@ import android.content.Context
 import android.graphics.*
 import androidx.core.net.toFile
 import androidx.core.net.toUri
+import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
+import dagger.assisted.Assisted
+import dagger.assisted.AssistedInject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
@@ -14,10 +17,11 @@ import xyz.teamgravity.jetpackworkmanager.core.constant.Worker
 import java.io.File
 import java.io.FileOutputStream
 
+@HiltWorker
 @Suppress("BlockingMethodInNonBlockingContext")
-class ColorFilterWorker(
-    private val context: Context,
-    private val parameters: WorkerParameters
+class ColorFilterWorker @AssistedInject constructor(
+    @Assisted private val context: Context,
+    @Assisted private val parameters: WorkerParameters
 ) : CoroutineWorker(context, parameters) {
 
     override suspend fun doWork(): Result {

@@ -19,12 +19,15 @@ import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.work.*
 import coil.compose.rememberImagePainter
+import dagger.hilt.android.AndroidEntryPoint
 import xyz.teamgravity.jetpackworkmanager.core.constant.Worker
 import xyz.teamgravity.jetpackworkmanager.core.worker.ColorFilterWorker
 import xyz.teamgravity.jetpackworkmanager.core.worker.DownloadWorker
 import xyz.teamgravity.jetpackworkmanager.presentation.theme.JetpackWorkmanagerTheme
 
+@AndroidEntryPoint
 class Main : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
