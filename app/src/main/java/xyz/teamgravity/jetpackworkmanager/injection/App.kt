@@ -18,7 +18,7 @@ class App : Application(), Configuration.Provider {
 
     override fun onCreate() {
         super.onCreate()
-
+        createNotificationChannel()
     }
 
     private fun createNotificationChannel() {
