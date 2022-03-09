@@ -1,4 +1,4 @@
-package xyz.teamgravity.jetpackworkmanager.ui.theme
+package xyz.teamgravity.jetpackworkmanager.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

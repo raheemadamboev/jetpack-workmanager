@@ -1,4 +1,4 @@
-package xyz.teamgravity.jetpackworkmanager.ui.theme
+package xyz.teamgravity.jetpackworkmanager.presentation.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
