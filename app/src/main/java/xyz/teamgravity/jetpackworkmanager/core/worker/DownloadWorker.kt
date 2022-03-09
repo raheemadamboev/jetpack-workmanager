@@ -3,6 +3,7 @@ package xyz.teamgravity.jetpackworkmanager.core.worker
 import android.content.Context
 import androidx.core.app.NotificationCompat
 import androidx.core.net.toUri
+import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.ForegroundInfo
 import androidx.work.WorkerParameters
@@ -20,10 +21,11 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 
+@HiltWorker
 @Suppress("BlockingMethodInNonBlockingContext")
 class DownloadWorker @AssistedInject constructor(
-    @Assisted parameters: WorkerParameters,
     @Assisted private val context: Context,
+    @Assisted parameters: WorkerParameters,
     private val repository: Repository
 ) : CoroutineWorker(context, parameters) {
 
