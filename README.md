@@ -16,4 +16,5 @@ Simple application that downloads Eminem image from internet and applies green c
 - Retrofit
 - Kotlin Coroutines
 - LiveData, State
+- Coil
 - Canvas
